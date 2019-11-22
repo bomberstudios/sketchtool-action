@@ -18,7 +18,7 @@ jobs:
         unzip sketch-60.1-88133.zip
     - name: Run SketchTool
       run: Sketch.app/Contents/Resources/sketchtool/bin/sketchtool export layers sample-document.sketch
-    - name: Update assets in `assets` folder
+    - name: Update assets in assets folder
       - uses: stefanzweifel/git-auto-commit-action@v2.3.0
         with:
           commit_message: Update assets
