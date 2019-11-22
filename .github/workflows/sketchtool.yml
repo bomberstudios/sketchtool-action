@@ -20,12 +20,12 @@ jobs:
       run: Sketch.app/Contents/Resources/sketchtool/bin/sketchtool export layers sample-document.sketch
     - name: Update assets in assets folder
       uses: stefanzweifel/git-auto-commit-action@v2.3.0
-        with:
-          commit_message: Update assets
-          branch: master
-          # Optional git params
-          commit_options: '--no-verify --signoff'
-          # Optional glob pattern of files which should be added to the commit
-          file_pattern: assets/\*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        commit_message: Update assets
+        branch: master
+        # Optional git params
+        commit_options: '--no-verify --signoff'
+        # Optional glob pattern of files which should be added to the commit
+        file_pattern: assets/\*
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
