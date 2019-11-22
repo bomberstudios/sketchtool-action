@@ -20,8 +20,8 @@ jobs:
         default_bump: patch
     - name: Download & Install Sketch
       run: |
-        curl -O https://download.sketchapp.com/sketch-60.1-88133.zip
-        unzip sketch-60.1-88133.zip
+        curl -OL https://sketch.com/download/sketch.zip
+        unzip sketch.zip
     - name: Run SketchTool
       run: Sketch.app/Contents/Resources/sketchtool/bin/sketchtool export layers --output=assets sample-document.sketch
     - name: ZIP Assets
