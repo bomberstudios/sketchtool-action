@@ -23,3 +23,4 @@ jobs:
       with:
         files: '*.png,*.svg,*.jpg,*.pdf'
         repo-token: ${{ secrets.GITHUB_TOKEN }}
+        release-tag: v1.0
