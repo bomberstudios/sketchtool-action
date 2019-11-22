@@ -23,7 +23,7 @@ jobs:
         curl -OL https://sketch.com/download/sketch.zip
         unzip sketch.zip
     - name: Run SketchTool
-      run: Sketch.app/Contents/Resources/sketchtool/bin/sketchtool export layers --output=assets sample-document.sketch
+      run: Sketch.app/Contents/Resources/sketchtool/bin/sketchtool export layers --output=assets *.sketch
     - name: ZIP Assets
       run: zip -r assets.zip assets/
     - name: Create a GitHub release
