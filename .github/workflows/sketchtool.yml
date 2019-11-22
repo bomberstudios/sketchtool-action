@@ -8,10 +8,8 @@ on:
     - '**.sketch'
 
 jobs:
-  build:
-
+  assets:
     runs-on: macOS-latest
-
     steps:
     - uses: actions/checkout@v1
     - name: Download & Install Sketch
@@ -19,4 +17,4 @@ jobs:
         curl -O https://download.sketchapp.com/sketch-60.1-88133.zip
         unzip sketch-60.1-88133.zip
     - name: Run SketchTool
-      run: Sketch.app/Contents/Resources/sketchtool/bin/sketchtool
+      run: Sketch.app/Contents/Resources/sketchtool/bin/sketchtool export layers sample-document.sketch
