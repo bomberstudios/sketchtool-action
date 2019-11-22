@@ -18,3 +18,8 @@ jobs:
         unzip sketch-60.1-88133.zip
     - name: Run SketchTool
       run: Sketch.app/Contents/Resources/sketchtool/bin/sketchtool export layers sample-document.sketch
+    - name: Upload assets to a Release
+      uses: AButler/upload-release-assets@v2.0
+      with:
+        files: '*.png,*.svg,*.jpg,*.pdf'
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
