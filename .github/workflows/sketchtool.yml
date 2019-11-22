@@ -1,0 +1,22 @@
+name: SketchTool Extract
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - '**.sketch'
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Download & Install Sketch
+      run: |
+        curl -O https://download.sketchapp.com/sketch-60.1-88133.zip
+        unzip sketch-60.1-88133.zip
+    - name: Run SketchTool
+      run: Sketch.app/Contents/Resources/sketchtool/bin/sketchtool
