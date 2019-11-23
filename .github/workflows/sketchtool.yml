@@ -36,7 +36,7 @@ jobs:
         release_name: Release ${{ steps.tag_version.outputs.new_tag }}
         draft: "false"
         prerelease: "false"
-    - name: Publish the Sketch Library to the release
+    - name: Publish the assets file to the release
       uses: actions/upload-release-asset@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
